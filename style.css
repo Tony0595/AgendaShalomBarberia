@@ -1,0 +1,254 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+}
+
+input, select, button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background: #222;
+    border: none;
+    color: white;
+}
+
+button {
+    background: #444;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#notification {
+    background: green;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.admin-filters {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#filterDate {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#todayButton {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#todayButton:hover {
+    background-color: #45a049;
+}
+
+/* Ajustar el estilo del input date para hacerlo más amigable */
+input[type="date"] {
+    position: relative;
+    cursor: pointer;
+    /* Hacer que el input tenga el mismo color de fondo que los demás */
+    background: #222 !important;
+}
+
+/* Ocultar el formato por defecto en Chrome */
+input[type="date"]::-webkit-datetime-edit {
+    color: white;
+}
+
+/* Estilizar el icono del calendario */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    /* Hacer el icono más visible */
+    filter: invert(1);
+    opacity: 0.7;
+    width: 20px;
+    height: 20px;
+}
+
+/* Asegurar que el texto sea visible */
+input[type="date"]::-webkit-datetime-edit-fields-wrapper {
+    color: white;
+}
+
+/* Mantener el estilo para días deshabilitados */
+.disabled-date {
+    color: #999;
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}
+
+/* Estilos para la sección de administrador */
+#adminSection {
+    background: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#adminSection h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.admin-filters {
+    background: #2a2a2a;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.appointments-container {
+    background: #2a2a2a;
+    border-radius: 8px;
+    padding: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.appointments-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.appointments-list li {
+    background: #333;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.appointments-list li:hover {
+    background: #404040;
+    transform: translateX(5px);
+}
+
+.appointment-time {
+    background: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-right: 15px;
+    font-weight: bold;
+    min-width: 90px;
+    text-align: center;
+}
+
+.appointment-info {
+    flex-grow: 1;
+}
+
+.appointment-name {
+    font-weight: bold;
+    color: #fff;
+}
+
+.appointment-service {
+    color: #888;
+    font-size: 0.9em;
+    margin-top: 3px;
+}
+
+.appointment-phone {
+    color: #4CAF50;
+    font-size: 0.9em;
+    margin-top: 3px;
+}
+
+/* Estilo para cuando no hay citas */
+.no-appointments {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+    font-style: italic;
+}
+
+/* Personalizar la barra de desplazamiento */
+.appointments-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.appointments-container::-webkit-scrollbar-track {
+    background: #1e1e1e;
+    border-radius: 4px;
+}
+
+.appointments-container::-webkit-scrollbar-thumb {
+    background: #4CAF50;
+    border-radius: 4px;
+}
+
+.appointments-container::-webkit-scrollbar-thumb:hover {
+    background: #45a049;
+}
+
+/* Estilos para el logo */
+.logo-container {
+    margin: 20px auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #4CAF50;
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para los mensajes de ayuda */
+small {
+    display: block;
+    margin-top: -5px;
+    margin-bottom: 15px;
+    font-size: 0.8em;
+    text-align: left;
+}
+
+/* Estilo para campos inválidos */
+input:invalid {
+    border: 1px solid #ff6b6b;
+}
+
+/* Estilo para campos válidos */
+input:valid {
+    border: 1px solid #4CAF50;
+}

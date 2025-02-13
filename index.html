@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shalom Barbería</title>
+    <link rel="icon" type="image/jpg" href="./ShalomBarber.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="./ShalomBarber.jpg" alt="Instagram profile image" class="logo">
+        </div>
+        <h1>Shalom Barbería</h1>
+
+        <!-- Formulario de reserva -->
+        <form id="appointmentForm">
+            <input type="text" id="name" placeholder="Nombre y Apellido" required>
+            <small style="color: #888;">Ingrese nombre y apellido</small>
+            
+            <input type="tel" id="phone" placeholder="Número de celular" required>
+            <small style="color: #888;">Ejemplo: 3001234567</small>
+            
+            <select id="service">
+                <option value="Corte">Corte</option>
+                <option value="Corte con barba">Corte con barba</option>
+                <option value="Solo barba">Solo barba</option>
+                <option value="Solo marcada de corte">Solo marcada de corte</option>
+            </select>
+            <small style="color: #ff6b6b;">No se atiende los días miércoles ni domingos</small>
+            <input type="date" id="date" required>
+            <select id="time" required>
+                <option value="">Seleccione un horario</option>
+            </select>
+            <button type="submit">Reservar</button>
+        </form>
+
+        <!-- Notificación de nueva cita -->
+        <div id="notification" class="hidden">¡Nueva cita agendada!</div>
+
+        <!-- Sección de administrador -->
+        <button id="adminLogin">Administración</button>
+        <div id="adminSection" class="hidden">
+            <h2>Turnos Agendados</h2>
+            <div class="admin-filters">
+                <input type="date" id="filterDate">
+                <button id="todayButton">Ver hoy</button>
+            </div>
+            <div class="appointments-container">
+                <ul id="appointmentsList" class="appointments-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
